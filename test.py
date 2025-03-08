@@ -93,7 +93,7 @@ class NeuralNetwork(nn.Module):
         logits = self.linear_relu_stack(x)
         return logits
  
-device = "cpu"
+device = 'cuda' if torch.cuda.is_available() else 'cpu'
 model = NeuralNetwork().to(device)
 learning_rate = 1e-5 * 2
 loss_fn = nn.MSELoss()
