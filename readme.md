@@ -112,44 +112,36 @@ It provides more informed tree growth, focusing on promising variations
 
 #### 1) AlphaBetaPlayer
 
-'''
-def __init__(self,depth = 2)
-
-'''
+    def __init__(self,depth = 2)
 
 Just needs the depth parameter to specify how deep the search is
 
 #### 2) MCTSPlayer
 
-'''
-def __init__(self,explorationFactor = 1,rollouts = 100,selectionDepth = 1,timeLimit = 5.0,timed = False):
-
-'''
+    def __init__(self,explorationFactor = 1,rollouts = 100,selectionDepth = 1,timeLimit = 5.0,timed = False):
 
 Uses the parameter 'timed' to see whether you want to limit the search by time or rollouts
 To Limit by Time - Set timed = True and timeLimt = [YOUR TIME LIMIT]
 To Limit by Rollouts - Set timed = False and timeLimt = [YOUR ROLLOUT COUNT]
 2) MCTSParrallelPlayer
 
-'''
-def __init__(self,explorationFactor = 1,rollouts = 800,selectionDepth = 2,num_threads = 4,timed = False,timeLimit = 3.0):
+    def __init__(self,explorationFactor = 1,rollouts = 800,selectionDepth = 2,num_threads = 4,timed = False,timeLimit = 3.0):
 
-'''
 
 Similar to MCTSPlayer but need number of threads to be used specified as well
 
 #### 3) RLMCTSPlayer
-'''
-def __init__(self, explorationFactor=1.4, rollouts=400, selectionDepth=4, timeLimit = 3.0,timed = False,checkpointNUM = 0):
-'''
+
+    def __init__(self, explorationFactor=1.4, rollouts=400, selectionDepth=4, timeLimit = 3.0,timed = False,checkpointNUM = 0):
+
 similiar to MCTSPlayer 
 checkpointNUM is to keep track of checkpoints in training of player
 training is done by using self.train and a checkpoint is saved after every call to self.train
 
 #### 4) RandomPlayer
-'''
-def __init__(self):
-'''
+
+    def __init__(self):
+
 No Setup needed this guy just plays random moves
 
 ### Geting the players to play
