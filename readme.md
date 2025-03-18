@@ -159,7 +159,7 @@ The GUI interface can be accessed by running gui_app.ipynb
 It consists of the board and selectors for both players(White and Black)
 with piece counts at the bottom
 
-![Alt text](gui_example.png)
+![Alt text](img/gui_example.png)
 
 Simply chose who you want playing which side and start to play
 
@@ -171,6 +171,32 @@ You can play
 ## ELO TESTING
 
 ELO was used to see what choice of selection_depth and training time will be best for the bots
+
+#### 1) MCTS - Parameter SelectionDepth
+
+![Alt text](img/mcts_graph.png)
+
+Best selection depth is 3
+
+#### 2) ParrallelMCTS - Parameter SelectionDepth
+
+![Alt text](img/pmcts_graph.png)
+
+Best selection depth is 3
+
+#### 3) AlphaZero type MCTS - Parameter Hours of training
+
+![Alt text](img/rlmcts_graph.png)
+
+Model is getting better with training but the benifits are diminishing
+
+## Comparison between models 
+
+ELO between the approaches
+
+
+
+
 
 
 
