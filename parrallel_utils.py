@@ -1,3 +1,5 @@
+import time
+
 GRID_SIZE = 8
 
 def is_valid_move(x, y,board,current_player):
@@ -124,16 +126,23 @@ class ParallelNode():
             else: current_player = 2
         return decide_winner(board,current_player)
     
-def run_mcts_instance(board,current_player,selectionDepth,explorationFactor,num_rollouts):
-
+def run_mcts_instance(board,current_player,selectionDepth,explorationFactor,num_rollouts,timed,timeLimit):
     try:
         root  = ParallelNode(-1,-1,current_player)
         board_copy = deepcopy(board)
-        for i in range(num_rollouts):
-            sim_board = deepcopy(board_copy)
-            root.rollout(selectionDepth,explorationFactor,sim_board)
-            del(sim_board)
-        return root
+        if not timed:
+            for i in range(num_rollouts):
+                sim_board = deepcopy(board_copy)
+                root.rollout(selectionDepth,explorationFactor,sim_board)
+                del(sim_board)
+            return root
+        else:
+            startTime = time.time()
+            while time.time() - startTime < timeLimit:
+                sim_board = deepcopy(board_copy)
+                root.rollout(selectionDepth,explorationFactor,sim_board)
+                del(sim_board)
+            return root
     except Exception as e:
         print(f"Error in worker process: {e}")
         # Return a default value or re-raise
