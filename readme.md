@@ -168,6 +168,14 @@ You can play
 - human against ai
 - ai against ai
 
+## ELO TESTING
+
+ELO was used to see what choice of selection_depth and training time will be best for the bots
+
+
+
+
+
 
 
 
