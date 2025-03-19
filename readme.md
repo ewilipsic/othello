@@ -1,7 +1,7 @@
 # OTHELLO BOT
 
 This project is a collection of Bots which can play othello against each other and YOU. As well as Utility to calculate their relative elos.<br>
-
+ 
 ## Game Rules
 
 Othello, also known as Reversi, is a classic board game played on an 8x8 grid. The game involves two players, one controlling black pieces and the other controlling white pieces. The objective is to have the most pieces of your color on the board when the game ends.
