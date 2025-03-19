@@ -43,7 +43,7 @@ Transistions are decided by checking all blank spots and then checking with the 
 ## Algorithms Used by the Various Players
 
 Algorithms Used in Othello Bot
-#### 1) Alpha Beta Pruning
+### 1) Alpha Beta Pruning
 
 Alpha Beta Pruning is an optimization technique for the Minimax algorithm that significantly reduces computation time by pruning branches that cannot influence the final decision. Instead of searching the entire game tree, it selectively evaluates only the most promising paths.
 
@@ -59,7 +59,7 @@ This optimization allows for deeper searches without affecting the final result
 
 In the best case scenario (when best moves are searched first), Alpha Beta Pruning reduces complexity from O(b^d) to approximately O(√b^d), where b is the branching factor and d is the search depth. This significant efficiency improvement enables the bot to look further ahead in the game, resulting in stronger play.
 
-#### 2) Monte Carlo Tree Search
+### 2) Monte Carlo Tree Search
 
 Monte Carlo Tree Search (MCTS) is a heuristic search algorithm particularly effective for games with high branching factors. It builds a search tree by focusing computational resources on the most promising moves based on random sampling of the search space.
 
@@ -91,7 +91,7 @@ Where:
 The first term ($\overline{X}_i$) represents exploitation (favoring nodes with high win rates), while the second term ($C \sqrt{\frac{2\ln{N}}{n_i}}$) represents exploration (favoring less-visited nodes).
 During the selection phase of MCTS, the algorithm chooses the child node with the highest UCT value.
 
-#### 3) AlphaZero-type Monte Carlo Tree Search
+### 3) AlphaZero-type Monte Carlo Tree Search
 
 AlphaZero represents a advancement in game AI by combining MCTS with deep neural networks. Rather than using random playouts, AlphaZero employs a neural network to evaluate positions and guide the search process.
 
@@ -110,13 +110,13 @@ It provides more informed tree growth, focusing on promising variations
 
 ### Initialisation of the Player Classes
 
-#### 1) AlphaBetaPlayer
+### 1) AlphaBetaPlayer
 
     def __init__(self,depth = 2)
 
 Just needs the depth parameter to specify how deep the search is
 
-#### 2) MCTSPlayer
+### 2) MCTSPlayer
 
     def __init__(self,explorationFactor = 1,rollouts = 100,selectionDepth = 1,timeLimit = 5.0,timed = False):
 
@@ -130,7 +130,7 @@ To Limit by Rollouts - Set timed = False and timeLimt = [YOUR ROLLOUT COUNT]
 
 Similar to MCTSPlayer but need number of threads to be used specified as well
 
-#### 3) RLMCTSPlayer
+### 3) RLMCTSPlayer
 
     def __init__(self, explorationFactor=1.4, rollouts=400, selectionDepth=4, timeLimit = 3.0,timed = False,checkpointNUM = 0):
 
@@ -138,7 +138,7 @@ similiar to MCTSPlayer
 checkpointNUM is to keep track of checkpoints in training of player
 training is done by using self.train and a checkpoint is saved after every call to self.train
 
-#### 4) RandomPlayer
+### 4) RandomPlayer
 
     def __init__(self):
 
