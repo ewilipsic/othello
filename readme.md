@@ -123,7 +123,7 @@ Just needs the depth parameter to specify how deep the search is
 Uses the parameter 'timed' to see whether you want to limit the search by time or rollouts
 To Limit by Time - Set timed = True and timeLimt = [YOUR TIME LIMIT]
 To Limit by Rollouts - Set timed = False and timeLimt = [YOUR ROLLOUT COUNT]
-2) MCTSParrallelPlayer
+### 2) MCTSParrallelPlayer
 
     def __init__(self,explorationFactor = 1,rollouts = 800,selectionDepth = 2,num_threads = 4,timed = False,timeLimit = 3.0):
 
