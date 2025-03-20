@@ -172,7 +172,7 @@ You can play
 code in elo.ipynb
 
 
-ELO was used to see what choice of selection_depth and training time will be best for the bots
+[ELO rating system](https://en.wikipedia.org/wiki/Elo_rating_system#:~:text=The%20Elo%20rating%20system%20is,a%20Hungarian%2DAmerican%20physics%20professor.) was used to see what choice of selection_depth and training time will be best for the bots
 #### 1) MCTS - Parameter SelectionDepth
 
 ![Alt text](img/mcts_graph.png)
