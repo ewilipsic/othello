@@ -168,10 +168,11 @@ You can play
 - human against ai
 - ai against ai
 
-## ELO TESTING
+## ELO TESTING 
+code in elo.ipynb
+
 
 ELO was used to see what choice of selection_depth and training time will be best for the bots
-
 #### 1) MCTS - Parameter SelectionDepth
 
 ![Alt text](img/mcts_graph.png)
@@ -195,6 +196,7 @@ Model is getting better with training but the benifits are diminishing
 ELO between the approaches
 
 ![Alt text](img/overall_elo_graph.png)
+code in elo2.ipynb
 
 ### Analysis of the results
 
