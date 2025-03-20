@@ -194,23 +194,26 @@ Model is getting better with training but the benifits are diminishing
 
 ELO between the approaches
 
+![Alt text](img/overall_elo_graph.png)
+
+### Analysis of the results
+
+We can see the ranking is as follows-
+1) Parrallel Mcts
+2) Mcts
+3) AlphaZero/RL type Mcts
+4) AlphaBeta Pruning 
+5) Random Player
+
+Parrallel Mcts beating Mcts is expected as it is in effect just throwing more computation at the problem.
+Random player getting beaten by everything else is also expected.
+
+Alpha Beta pruning was able to only reach a small depth due to high branching factor of othello and therefore has limited performace.
+
+RL MCTS is performing worse than mcts but outperforms AlphaBeta ,this could be due to limited training time(20Hours) or suboptimal choice of hyperparameters.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+## Scope for improvement
+- Some improvement can be achieved in MCTS by optimizing preformance to allow the code to make more simulations
+- RL MCTS performance can be imporved by more training,hyperparameter tuning or by changing the architecture of the policy_value network like - number of Convolution Layers,kernel size,number of linear layers etc
+- for Alpha beta Pruning a better static evaluation function could be developed.
