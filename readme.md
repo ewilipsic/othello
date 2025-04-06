@@ -192,11 +192,11 @@ Best selection depth is 3
 Model is getting better with training but the benifits are diminishing
 
 ## Comparison between models 
+code in elo2.ipynb
 
 ELO between the approaches
 
 ![Alt text](img/overall_elo_graph.png)
-code in elo2.ipynb
 
 ### Analysis of the results
 
