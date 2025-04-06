@@ -1,4 +1,5 @@
 # OTHELLO BOT
+By : 2301ai04 Ayush Bansal
 
 This project is a collection of Bots which can play othello against each other and YOU. As well as Utility to calculate their relative elos.<br>
  
