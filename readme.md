@@ -91,9 +91,9 @@ Where:
 The first term ($\overline{X}_i$) represents exploitation (favoring nodes with high win rates), while the second term ($C \sqrt{\frac{2\ln{N}}{n_i}}$) represents exploration (favoring less-visited nodes).
 During the selection phase of MCTS, the algorithm chooses the child node with the highest UCT value.
 
-### 3) AlphaZero-type Monte Carlo Tree Search
+### 3) Monte Carlo Tree Search using Policy Network
 
-AlphaZero represents a advancement in game AI by combining MCTS with deep neural networks. Rather than using random playouts, AlphaZero employs a neural network to evaluate positions and guide the search process.
+AlphaZero represents a advancement in game AI by combining MCTS with deep neural networks. Rather than using random playouts, AlphaZero employs a neural network to evaluate positions and guides the player towards considering more likely moves.
 
 The neural network takes the board state as input and outputs:
 - A probability distribution over possible moves (p(s))
@@ -101,10 +101,9 @@ The neural network takes the board state as input and outputs:
 
 This approach offers several advantages:
 
-The neural network is trained through self-play, learning patterns and strategies without human knowledge
+The neural network is trained through self-play, learning patterns and strategies without human knowledge input.
 
 It provides more informed tree growth, focusing on promising variations
-
 
 ## Usage of Player Classes
 
@@ -203,7 +202,7 @@ code in elo2.ipynb
 We can see the ranking is as follows-
 1) Parrallel Mcts
 2) Mcts
-3) AlphaZero/RL type Mcts
+3) RL type Mcts
 4) AlphaBeta Pruning 
 5) Random Player
 
